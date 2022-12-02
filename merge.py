@@ -14,6 +14,11 @@ def merge(image_dir: str) -> np.ndarray:
     Скрипт merge принимает на вход папку
     с нарезанными картинками и из них собирает
     оригинальную.
+
+    Arguments:
+        image_dir (str): path to directory with splitted images
+    Returns:
+        Numpy array with merged image
     '''
 
     image_rows = []

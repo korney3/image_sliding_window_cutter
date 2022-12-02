@@ -16,6 +16,18 @@ def split(image_path: str, window_size: Union[Tuple[int, int], Tuple[float, floa
     размер (h, w) окна в пикселях или процентах,
     смещение по x и y, и нарезает
     изображения sliding window подходом.
+
+    Arguments:
+        image_path (str): path to image to split
+        window_size (Tuple[int, int] or Tuple[float, float]): width
+                                    and height of sliding window
+                                    in pixels of percent
+        use_percent (bool) = False: if window size is given is percent
+        x_shift (int) = 0: shift of start of cutting x-coordinate
+        y_shift (int) = 0: shift of start of cutting y-coordinate
+        result_dir (str) = "./split_image": directory to store image's pieces
+    Returns:
+        Path to cut image
     '''
 
     image = read_image(image_path)
@@ -92,4 +104,4 @@ def save_image(image_array: np.ndarray, result_dir: str, image_name: str):
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
     cv2.imwrite(os.path.join(result_dir, image_name), image)
-    return os.path.join(result_dir, image_name)
+    return os.path.abspath(os.path.join(result_dir, image_name))
