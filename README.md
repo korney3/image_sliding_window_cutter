@@ -32,7 +32,7 @@ Repo contains scripts to split image into pieces with predefined size and merge 
     Returns:
         Path to cut image
 ```
-Скрипт merge принимает на вход папку
+Скрипт [merge](merge.py) принимает на вход папку
     с нарезанными картинками и из них собирает
     оригинальную.
 ```
