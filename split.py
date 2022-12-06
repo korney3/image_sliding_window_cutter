@@ -100,6 +100,7 @@ def get_image_name(x: int, y: int, image_height: int, image_width: int, window_h
 
 
 def save_image(image_array: np.ndarray, result_dir: str, image_name: str):
+    os.makedirs(result_dir, exist_ok=True)
     image = image_array.astype(np.float32)
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
