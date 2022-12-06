@@ -15,6 +15,9 @@ Repo contains scripts to split image into pieces with predefined size and merge 
 
 
 ## Code
+Пример использования находится в [main](main.py)
+
+
 Скрипт [split](split.py) принимает на вход картинку,
     размер (h, w) окна в пикселях или процентах,
     смещение по x и y, и нарезает
